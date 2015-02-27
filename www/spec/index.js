@@ -47,8 +47,8 @@ describe('app', function() {
         beforeEach(function() {
             var el = document.getElementById('stage');
             el.innerHTML = ['<div id="deviceready">',
-                            '    <p class="event listening">Listening</p>',
-                            '    <p class="event received">Received</p>',
+                            '    <p class="event listening">Escutando</p>',
+                            '    <p class="event received">Recebido</p>',
                             '</div>'].join('\n');
         });
 
