@@ -20,6 +20,7 @@ var app = {
     // Application Constructor
     initialize: function() {
         this.bindEvents();
+        this.onBatteryLow();
     },
     // Bind Event Listeners
     //
