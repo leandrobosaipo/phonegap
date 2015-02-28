@@ -45,5 +45,14 @@ var app = {
         receivedElement.setAttribute('style', 'display:block;');
 
         console.log('Received Event: ' + id);
+    },
+	
+    onBatteryLow: function() {
+        //document.addEventListener('deviceready', this.onDeviceReady, false);
+		document.addEventListener("batterylow", this.onBatteryLow, false);
+    },
+	onBatteryLow: function(info) {
+    // Handle the battery low event
+    alert("Battery Level Low " + info.level + "%");
     }
 };
