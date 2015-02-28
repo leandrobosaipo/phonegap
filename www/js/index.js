@@ -20,7 +20,13 @@ var app = {
     // Application Constructor
     initialize: function() {
         this.bindEvents();
-        this.onBatteryLow();
+        //this.onBatteryLow();
+		window.addEventListener("batterylow", this.onBatteryLow, false);
+
+
+    },
+    onBatteryLow: function(info) {
+        alert("Battery Level Low " + info.level + "%");
     },
     // Bind Event Listeners
     //
@@ -53,6 +59,8 @@ var app = {
 		document.addEventListener("batterylow", this.onBatteryLow, false);
     },
 	onBatteryLow: function(info) {
+		
+		console.log(info);
     // Handle the battery low event
     alert("Battery Level Low " + info.level + "%");
     }
